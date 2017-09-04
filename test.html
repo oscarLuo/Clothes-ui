@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 150px;
+            height: 50px;
+            position: relative;
+        }
+        .container h2{
+            width: 100%;
+            height: 100%;
+            background: #007dba;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            text-align: center;
+            line-height: 50px;
+        }
+        .container div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s;
+            transform: rotateX(0deg);
+        }
+        .container div a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: lightskyblue;
+            z-index: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+        .container div a.testing{
+            transform: rotateX(180deg);
+        }
+        .container div.title1{
+            transform-origin: center bottom 0px;
+        }
+        .container div.title2{
+            transform-origin: center top 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Heading</h2>
+        <div class="title1 test1">
+            <a href="#" class="testing">活动服装</a>
+            <div class="title2 test2">
+                <a href="#" >主题服装</a>
+                <div class="title1 test3">
+                    <a href="#" class="testing">服装配饰</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="plugins/jquery.min.js"></script>
+
+    <script>
+
+        $(".container").click(function(){
+            $(this).find(".test").each(function(i){
+                $(this).animate({
+                    "transform":"rotateX(" + 180 + "deg)"
+                },500);
+
+                console.log(typeof $(this));
+            });
+
+        })
+    </script>
+</body>
+</html>

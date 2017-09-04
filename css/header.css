@@ -1,0 +1,118 @@
+*{
+    padding:0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    background-color: lightgrey;
+}
+.container header{
+    width: 100%;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.none{
+    display: none;
+}
+.box-sizing{
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+.container .navigation{
+    width: 70%;
+    height: 120px;
+    position: absolute;
+    left: -70%;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: "微软雅黑";
+    max-width: 300px;
+}
+.container .navigation li.primary{
+    width: 100%;
+    background: lightseagreen;
+}
+.container .navigation li.primary ul li{
+    background: lightslategrey;
+}
+.container .navigation li a{
+    display: block;
+    border-bottom:solid 1px #dfe0e0;
+    padding: 12px 13px;
+    color: #ffffff;
+}
+.container .navigation li a.primary-link{
+    color: #ffffff;
+    position: relative;
+}
+.container .navigation li a.primary-link:after{
+    height: 12px;
+    width: 12px;
+    content: "";
+    fill:#ffffff;
+    stroke:#ffffff;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../images/arrow-down.svg");
+    position: absolute;
+    right: 22px;
+    top: 20px;
+}
+.container .navigation li a.secondary-link{
+    padding: 12px 18px;
+}
+.container .navigation li.homepage{
+    background: tan;
+}
+.container .header{
+    width: 100%;
+    height: 46px;
+    background: #ff5384;
+    position: relative;
+}
+.container .header .icon{
+    width: 30px;
+    height: 30px;
+    background:url("../images/menu.svg") no-repeat center center;
+    float: left;
+    margin-top: 7px;
+}
+.container .header .search{
+    background: url("../images/search.svg") no-repeat center center;
+    width: 30px;
+    height: 40px;
+    float: left;
+    background-size: contain;
+    position: absolute;
+    right: 20px;
+}
+.container .header .searchArea{
+    width: 100%;
+    clear: both;
+}
+.container .carousel{
+    width: 100%;
+}
+.carousel .slick-slider{
+    margin-bottom: 15px;
+}
+.container .carousel img{
+    width: 100%;
+}

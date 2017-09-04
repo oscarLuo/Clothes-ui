@@ -1,0 +1,30 @@
+.container .icons{
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 15px 0;
+}
+.container .icons li{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.container .icons li a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    color: #000000;
+}
+.container .icons li img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    background: goldenrod;
+}
+.container .icons li img.opera{
+    background: burlywood;
+}
+.container .icons li img.han{
+    background: none;
+}
